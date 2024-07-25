@@ -1,34 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include"/Users/yousefmahmoud/Desktop/Studying/Embedded_Diploma_AMIT/Codes_in_class/Data_Structure/Libraries/RING.h"
 
-typedef struct ring_node
-{
-    int data;
-    struct ring_node *pNext;
-}vertix;
-
-vertix *ptr=NULL;
-
-vertix* createVertix(int data);
-void addVertix(int data);
-void print_ring();
-int delete_vertix(int index);
-
-int main(void)
-{
-    addVertix(1);
-    addVertix(2);
-    addVertix(3);
-    addVertix(4);
-    addVertix(5);
-    print_ring();
-
-    int data=delete_vertix(4);
-    printf("\nRing after delete\n=======================\n");
-    print_ring();
-
-    return 0;
-}
 vertix* createVertix(int data)
 {
     vertix* pNode=(vertix*)malloc(sizeof(vertix));
